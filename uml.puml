@@ -48,7 +48,7 @@ comprar *- VIP
 comprar *- Regular
 Usuario *- comprar
 Menu <|- App
-Menu *- usuario
+Menu *- Usuario
 
 
 @enduml
