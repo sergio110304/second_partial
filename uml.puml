@@ -1,0 +1,54 @@
+@startuml
+abstract abstract {
++selec_pelicula()
++selec_hora()
++selec_cantidad()
++selec_asiento()
++comprar()
+}
+
+class VIP {
++selec_pelicula()
++selec_hora()
++selec_cantidad()
++selec_asiento()
++comprar()
+}
+
+class Regular {
++selec_pelicula()
++selec_hora()
++selec_cantidad()
++selec_asiento()
++comprar()
+}
+
+class comprar {
++seleccionar()
+}
+class Usuario {
++Registro()
++Registro_usuario()
++Verifica_login()
++exito_login()
++exito_registro()
++no_cont()
++no_usuario()
+}
+class App {
++Opcion
+}
+class Menu {
++Opcion
++menu_principal()
+}
+abstract <|-- VIP
+abstract <|-- Regular
+comprar *- VIP
+comprar *- Regular
+Usuario *- comprar
+Menu <|- App
+Menu *- usuario
+
+
+@enduml
